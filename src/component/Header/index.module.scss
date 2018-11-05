@@ -1,0 +1,25 @@
+.headerWrap {
+    height: 100%;
+
+    $logoSize: 80px;
+    .title {
+        height: $logoSize;
+        width: 300px;
+
+        border: 1px solid red;
+
+        .logo {
+            height: $logoSize;
+            width: $logoSize;
+            background: url('./img/logo.svg') no-repeat 0 0 / 100% 100%;
+            float: left;
+        }
+
+        .text {
+            height: $logoSize;
+            line-height: $logoSize;
+            font-size: 30px;
+            font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+        }
+    }
+}
