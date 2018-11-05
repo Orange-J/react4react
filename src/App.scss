@@ -1,9 +1,35 @@
-@import '~antd/dist/antd.css';
-
 .App {
-    text-align: center;
+    height: 100vh;
 
-    .scss-test {
-        color: red;
+    $headerHeight: 80px;
+    .header {
+        height: $headerHeight;
+
+        border: 1px solid red;
+    }
+
+    .body {
+        height: calc(100% - #{$headerHeight});
+        position: relative;
+
+        border: 1px solid green;
+
+        $sidebarWidth: 300px;
+        .sidebar {
+            width: $sidebarWidth;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            border: 1px solid red;
+        }
+
+        .main {
+            height: 100%;
+            margin-left: $sidebarWidth;
+
+            border: 1px solid green;
+        }
     }
 }
