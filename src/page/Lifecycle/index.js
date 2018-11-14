@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styles from './index.module.scss';
+import TextBox from './TextBox';
 
 class Lifecycle extends Component {
     render () {
@@ -8,7 +9,9 @@ class Lifecycle extends Component {
                 {/* TODO: https://www.wikitechy.com/tutorials/react/reactjs-component-life-cycle */}
                 <div className={styles.chart}>
                     <div className={styles.startBox}>startBox</div>
-                    <div className={styles.renderBox}>renderBox</div>
+                    <div className={styles.renderBox}>
+                        <TextBox text="test" />
+                    </div>
                     <div className={styles.updateBox}>updateBox</div>
                     <div className={styles.middleStateBox}>middleStateBox</div>
                     <div className={styles.setStateBox}>setStateBox</div>

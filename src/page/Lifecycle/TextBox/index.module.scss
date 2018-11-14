@@ -1,0 +1,8 @@
+$box_height: 40px;
+.TextBox {
+    height: $box_height;
+    line-height: $box_height;
+    background: #9cf;
+    text-align: center;
+    border-radius: 2px;
+}
