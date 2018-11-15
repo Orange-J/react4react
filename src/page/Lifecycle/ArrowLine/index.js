@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './index.module.scss';
 
 const ArrowLine = props => (
@@ -11,5 +12,20 @@ const ArrowLine = props => (
         </div>
     </div>
 );
+
+ArrowLine.propTypes = {
+    height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    showArrow: PropTypes.bool,
+    direction: PropTypes.oneOf(['top', 'bottom', 'left', 'right']).isRequired,
+    lineStyle: PropTypes.oneOf(['solid', 'dashed', 'dotted'])
+};
+
+ArrowLine.defaultProps = {
+    height: '100%',
+    width: '100%',
+    showArrow: true,
+    lineStyle: 'solid'
+};
 
 export default ArrowLine;
