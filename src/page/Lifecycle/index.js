@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './index.module.scss';
 import TextBox from './TextBox';
+import ArrowLine from './ArrowLine';
 
 class Lifecycle extends Component {
     render () {
@@ -11,6 +12,7 @@ class Lifecycle extends Component {
                     <div className={styles.startBox}>startBox</div>
                     <div className={styles.renderBox}>
                         <TextBox text="test" />
+                        <ArrowLine />
                     </div>
                     <div className={styles.updateBox}>updateBox</div>
                     <div className={styles.middleStateBox}>middleStateBox</div>
