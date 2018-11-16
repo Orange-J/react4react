@@ -27,14 +27,16 @@ const getLineCls = ({ direction }) => {
 };
 
 const ArrowLine = props => {
-    // TODO: showArrow lineStyle功能
+    // TODO: lineStyle功能
     return (
         <div className={styles.ArrowLine} style={{width: props.width, height: props.height}}>
             <div className={styles.lineBox + ' xycenter'} style={getLineBoxSize(props)}>
                 <div className={styles[getLineCls(props)]  + ' xycenter'}></div>
-                <div className={styles[`${props.direction}Arrow`]}>
-                    <Arrow direction={props.direction}/>
-                </div>
+                {props.showArrow ? (
+                    <div className={styles[`${props.direction}Arrow`]}>
+                        <Arrow direction={props.direction}/>
+                    </div>
+                ) : null}
             </div>
         </div>
     );
