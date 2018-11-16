@@ -1,10 +1,47 @@
 .ArrowLine {
-    height: 50px;
+    position: relative;
 
     .lineBox {
-        width: 12px;
-        height: 100%;
-        margin: 0 auto;
         border: 1px solid red;
+
+        .lineH {
+            background: #000;
+            width: 100%;
+            height: 2px;
+        }
+
+        .lineV {
+            background: #000;
+            width: 2px;
+            height: 100%;
+        }
+
+        .topArrow {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%) rotate(180deg);
+        }
+
+        .bottomArrow {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .leftArrow {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%)  rotate(90deg);
+        }
+
+        .rightArrow {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%)  rotate(270deg);
+        }
     }
 }

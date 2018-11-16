@@ -7,6 +7,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import { DEFAULT_ARROW_WIDTH, DEFAULT_ARROW_HEIGHT} from '../const';
 
 const getArrowPath = (w, h, sunken) => {
     return [
@@ -33,8 +34,8 @@ Arrow.propTypes = {
 };
 
 Arrow.defaultProps = {
-    width: 12,
-    height: 14,
+    width: DEFAULT_ARROW_WIDTH,
+    height: DEFAULT_ARROW_HEIGHT,
     sunken: 3
 };
 
