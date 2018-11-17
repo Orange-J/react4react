@@ -5,15 +5,39 @@
         border: 1px solid red;
 
         .lineH {
-            background: #000;
+            border-top-width: 2px;
+            border-top-color: #000;
             width: 100%;
-            height: 2px;
+
+            &.solid {
+                border-top-style: solid;
+            }
+
+            &.dotted {
+                border-top-style: dotted;
+            }
+
+            &.dashed {
+                border-top-style: dashed;
+            }
         }
 
         .lineV {
-            background: #000;
-            width: 2px;
+            border-left-width: 2px;
+            border-left-color: #000;
             height: 100%;
+
+            &.solid {
+                border-left-style: solid;
+            }
+
+            &.dotted {
+                border-left-style: dotted;
+            }
+
+            &.dashed {
+                border-left-style: dashed;
+            }
         }
 
         .topArrow {

@@ -13,8 +13,8 @@ class Lifecycle extends Component {
                     <div className={styles.renderBox}>
                         <TextBox text="test" />
                         <ArrowLine direction="bottom" height={100}/>
-                        <ArrowLine direction="top"/>
-                        <ArrowLine direction="left"/>
+                        <ArrowLine direction="top" lineStyle="dotted"/>
+                        <ArrowLine direction="left" lineStyle="dashed"/>
                         <ArrowLine direction="right"/>
                     </div>
                     <div className={styles.updateBox}>updateBox</div>
