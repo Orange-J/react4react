@@ -2,8 +2,10 @@ $box_height: 40px;
 .TextBox {
     height: $box_height;
     line-height: $box_height;
+    display: inline-block;
     background: #9cf;
     text-align: center;
     font-weight: bold;
     border-radius: 2px;
+    padding: 0 10px;
 }
