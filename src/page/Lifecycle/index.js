@@ -11,6 +11,14 @@ const renderBoxData = [
     'componentDidMount()'
 ];
 
+const updateBoxData = [
+    'componentWillReceiveProps(nextProps)',
+    'shouldComponentUpdate(nextProps, nextState)',
+    'componentWillUpdate(nextProps, nextState)',
+    'render()',
+    'componentDidUpdate(prevProps, prevState)'
+];
+
 class Lifecycle extends Component {
     render () {
         return (
@@ -20,16 +28,25 @@ class Lifecycle extends Component {
                     <div className={styles.startBox}>startBox</div>
                     <div className={styles.renderBox}>
                         {
-                            renderBoxData.map(s => (
-                                <React.Fragment key={s}>
-                                    <TextBox text={s} />
+                            renderBoxData.map(fnName => (
+                                <React.Fragment key={fnName}>
+                                    <TextBox text={fnName} />
                                     <ArrowLine direction="bottom" lineStyle="dashed" />
                                 </React.Fragment>
                             ))
                         }
+                        <div className={styles.middleStateBox}></div>
                     </div>
-                    <div className={styles.updateBox}>updateBox</div>
-                    <div className={styles.middleStateBox}></div>
+                    <div className={styles.updateBox}>
+                        {
+                            updateBoxData.map((fnName, index) => (
+                                <React.Fragment key={fnName}>
+                                    <TextBox text={fnName} />
+                                    {(index === updateBoxData.length - 1 ? null : <ArrowLine direction="bottom" lineStyle="dashed" />)}
+                                </React.Fragment>
+                            ))
+                        }
+                    </div>
                     <div className={styles.setStateBox}>setStateBox</div>
                 </div>
             </div>
