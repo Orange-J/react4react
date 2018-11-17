@@ -50,7 +50,7 @@ ArrowLine.propTypes = {
 };
 
 ArrowLine.defaultProps = {
-    height: 50,
+    height: 30,
     width: '100%',
     showArrow: true,
     lineStyle: 'solid'
