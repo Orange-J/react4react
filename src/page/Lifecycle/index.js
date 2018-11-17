@@ -25,7 +25,20 @@ class Lifecycle extends Component {
             <div className={styles.lifecycle}>
                 {/* TODO: https://www.wikitechy.com/tutorials/react/reactjs-component-life-cycle */}
                 <div className={styles.chart}>
-                    <div className={styles.startBox}>startBox</div>
+                    <div className={styles.startBox}>
+                        <div className={styles.startState}></div>
+                        <ArrowLine direction="top" lineStyle="dashed" height={168} />
+                        <TextBox text="componentWillUnmount()" />
+
+                        <div className={styles.renderArrowLine}>
+                            <ArrowLine direction="right" height="100%" />
+                            <div className={`${styles.text} xycenter`}>
+                                <span>ReactDOM</span>
+                                <br />
+                                <span>.render()</span>
+                            </div>
+                        </div>
+                    </div>
                     <div className={styles.renderBox}>
                         {
                             renderBoxData.map(fnName => (

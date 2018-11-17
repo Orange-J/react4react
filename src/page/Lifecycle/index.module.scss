@@ -9,14 +9,36 @@
         margin: 0 auto;
         position: relative;
         
+        $circleSize: 40px;
         $leftOffset: 50px;
         .startBox {
             position: absolute;
             top: 50px;
             left: $leftOffset;
-            height: 260px;
-            width: 180px;
-            border: 1px solid red;
+
+            .startState {
+                margin: 0 auto;
+                height: $circleSize;
+                width: $circleSize;
+                border: 2px solid #000;
+                border-radius: 50%;
+            }
+
+            .renderArrowLine {
+                position: absolute;
+                top: 0;
+                left: 116px;
+                width: 198px;
+                height: 40px;
+
+                .text {
+                    position: absolute;
+                    padding: 0 3px;
+                    background: #fff;
+                    font-weight: bold;
+                    line-height: 16px;
+                }
+            }
         }
 
         .renderBox {
@@ -26,8 +48,8 @@
             text-align: center;
 
             .middleStateBox {
-                height: 40px;
-                width: 40px;
+                height: $circleSize;
+                width: $circleSize;
                 border-radius: 50%;
                 background: #000;
                 margin: 2px auto 0 auto;
