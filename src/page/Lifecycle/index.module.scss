@@ -24,16 +24,16 @@
             top: 50px;
             left: 450px;
             width: 200px;
-            border: 1px solid red;
+            text-align: center;
         }
 
         .updateBox {
             position: absolute;
-        top: 400px;
-        left: 700px;
-        height: 400px;
-        width: 200px;
-        border: 1px solid red;
+            top: 400px;
+            left: 700px;
+            height: 400px;
+            width: 200px;
+            border: 1px solid red;
         }
 
         .middleStateBox {
@@ -42,7 +42,8 @@
             left: 530px;
             height: 40px;
             width: 40px;
-            border: 1px solid red;
+            border-radius: 50%;
+            background: #000;
         }
 
         .setStateBox {

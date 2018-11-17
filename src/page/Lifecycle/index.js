@@ -29,7 +29,7 @@ class Lifecycle extends Component {
                         }
                     </div>
                     <div className={styles.updateBox}>updateBox</div>
-                    <div className={styles.middleStateBox}>middleStateBox</div>
+                    <div className={styles.middleStateBox}></div>
                     <div className={styles.setStateBox}>setStateBox</div>
                 </div>
             </div>
