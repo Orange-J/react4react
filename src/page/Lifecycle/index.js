@@ -57,6 +57,15 @@ class Lifecycle extends Component {
                                 <span>setProps()</span>
                             </div>
                         </div>
+
+                        <div className={styles.setStateArrowLine}>
+                            <div className={styles.arrowLineWrap}>
+                                <ArrowLine direction="right" height="100%" />
+                            </div>
+                            <div className={`${styles.arrowLineText} xycenter`}>
+                                <span>setState()</span>
+                            </div>
+                        </div>
                     </div>
                     <div className={styles.updateBox}>
                         {

@@ -70,6 +70,19 @@
                 width: 124px;
                 height: 40px;
             }
+
+            .setStateArrowLine {
+                position: absolute;
+                bottom: -60px;
+                left: 98px;
+                width: 235px;
+                height: 70px;
+
+                .arrowLineWrap {
+                    height: 100%;
+                    transform: rotate(17deg);
+                }
+            }
         }
 
         .updateBox {
