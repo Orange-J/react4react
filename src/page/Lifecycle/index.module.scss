@@ -1,6 +1,14 @@
 .lifecycle {
     height: 100%;
     overflow: auto;
+
+    .arrowLineText {
+        position: absolute;
+        padding: 1px 3px;
+        background: #fff;
+        font-weight: bold;
+        line-height: 16px;
+    }
     
     .chart {
         border: 1px solid red;
@@ -61,6 +69,12 @@
             top: 403px;
             left: $leftOffset + 510px;
             text-align: center;
+
+            .shouldText {
+                top: 156px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
 
         .setStateBox {

@@ -32,7 +32,7 @@ class Lifecycle extends Component {
 
                         <div className={styles.renderArrowLine}>
                             <ArrowLine direction="right" height="100%" />
-                            <div className={`${styles.text} xycenter`}>
+                            <div className={`${styles.arrowLineText} xycenter`}>
                                 <span>ReactDOM</span>
                                 <br />
                                 <span>.render()</span>
@@ -55,10 +55,18 @@ class Lifecycle extends Component {
                             updateBoxData.map((fnName, index) => (
                                 <React.Fragment key={fnName}>
                                     <TextBox text={fnName} />
-                                    {(index === updateBoxData.length - 1 ? null : <ArrowLine direction="bottom" lineStyle="dashed" />)}
+                                    {
+                                        index === updateBoxData.length - 1 ? null :
+                                            (
+                                                <ArrowLine height={
+                                                    index === 0 || index === 1 ? 60 : 40
+                                                } direction="bottom" lineStyle="dashed" />
+                                            )
+                                    }
                                 </React.Fragment>
                             ))
                         }
+                        <div className={`${styles.arrowLineText} ${styles.shouldText}`}>true</div>
                     </div>
                     <div className={styles.setStateBox}>setStateBox</div>
                 </div>
