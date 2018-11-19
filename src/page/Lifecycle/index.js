@@ -48,7 +48,15 @@ class Lifecycle extends Component {
                                 </React.Fragment>
                             ))
                         }
+
                         <div className={styles.middleStateBox}></div>
+
+                        <div className={styles.setPropsArrowLine}>
+                            <ArrowLine direction="right" height="100%" />
+                            <div className={`${styles.arrowLineText} xycenter`}>
+                                <span>setProps()</span>
+                            </div>
+                        </div>
                     </div>
                     <div className={styles.updateBox}>
                         {
