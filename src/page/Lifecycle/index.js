@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styles from './index.module.scss';
 import TextBox from './TextBox';
 import ArrowLine from './ArrowLine';
+import ArrowCurve from './ArrowCurve';
 
 const renderBoxData = [
     'getDefaultProps()',
@@ -85,7 +86,39 @@ class Lifecycle extends Component {
                         }
                         <div className={`${styles.arrowLineText} ${styles.shouldText}`}>true</div>
                     </div>
-                    <div className={styles.setStateBox}>can use setState()</div>
+                    <div className={styles.canSetStateBox}>can use setState()</div>
+                    <ArrowCurve
+                        cls={styles.canSetStateLine1}
+                        width={190}
+                        height={65}
+                        startXY="0 0"
+                        endXY="190 65"
+                        controlXY="0 0"
+                    />
+                    <ArrowCurve
+                        cls={styles.canSetStateLine2}
+                        width={190}
+                        height={65}
+                        startXY="0 65"
+                        endXY="190 0"
+                        controlXY="0 65"
+                    />
+                    <ArrowCurve
+                        cls={styles.canSetStateLine3}
+                        width={60}
+                        height={115}
+                        startXY="0 115"
+                        endXY="60 0"
+                        controlXY="60 0"
+                    />
+                    <ArrowCurve
+                        cls={styles.canSetStateLine4}
+                        width={120}
+                        height={475}
+                        startXY="5 0"
+                        endXY="60 475"
+                        controlXY="200 190"
+                    />
                 </div>
             </div>
         );

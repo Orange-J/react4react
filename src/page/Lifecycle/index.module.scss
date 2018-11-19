@@ -98,13 +98,36 @@
             }
         }
 
-        .setStateBox {
+        .canSetStateBox {
             position: absolute;
-            top: 260px;
-            left: 710px;
+            top: 265px;
+            left: 715px;
             font-size: 16px;
             font-weight: bold;
-            border: 1px solid red;
+        }
+
+        .canSetStateLine1 {
+            position: absolute;
+            top: 205px;
+            left: 525px;
+        }
+
+        .canSetStateLine2 {
+            position: absolute;
+            top: 290px;
+            left: 525px;
+        }
+
+        .canSetStateLine3 {
+            position: absolute;
+            top: 290px;
+            left: 725px;
+        }
+
+        .canSetStateLine4 {
+            position: absolute;
+            top: 290px;
+            left: 825px;
         }
     }
 }
