@@ -42,16 +42,16 @@ const ArrowLine = props => {
 };
 
 ArrowLine.propTypes = {
-    height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     showArrow: PropTypes.bool,
     direction: PropTypes.oneOf(['top', 'bottom', 'left', 'right']).isRequired,
     lineStyle: PropTypes.oneOf(['solid', 'dashed', 'dotted'])
 };
 
 ArrowLine.defaultProps = {
-    height: 30,
     width: '100%',
+    height: 30,
     showArrow: true,
     lineStyle: 'solid'
 };
