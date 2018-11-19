@@ -85,7 +85,7 @@ class Lifecycle extends Component {
                         }
                         <div className={`${styles.arrowLineText} ${styles.shouldText}`}>true</div>
                     </div>
-                    <div className={styles.setStateBox}>setStateBox</div>
+                    <div className={styles.setStateBox}>can use setState()</div>
                 </div>
             </div>
         );
