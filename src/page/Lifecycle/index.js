@@ -94,6 +94,7 @@ class Lifecycle extends Component {
                         startXY="0 0"
                         endXY="190 65"
                         controlXY="0 0"
+                        lineStyle="dotted"
                     />
                     <ArrowCurve
                         cls={styles.canSetStateLine2}
@@ -102,6 +103,7 @@ class Lifecycle extends Component {
                         startXY="0 65"
                         endXY="190 0"
                         controlXY="0 65"
+                        lineStyle="dotted"
                     />
                     <ArrowCurve
                         cls={styles.canSetStateLine3}
@@ -110,6 +112,7 @@ class Lifecycle extends Component {
                         startXY="0 115"
                         endXY="60 0"
                         controlXY="60 0"
+                        lineStyle="dotted"
                     />
                     <ArrowCurve
                         cls={styles.canSetStateLine4}
@@ -118,6 +121,7 @@ class Lifecycle extends Component {
                         startXY="5 0"
                         endXY="60 475"
                         controlXY="200 190"
+                        lineStyle="dotted"
                     />
                 </div>
             </div>

@@ -2,6 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './index.module.scss';
 
+const lineStyleConfig = {
+    solid: {
+        strokeWidth: 4
+    },
+    dashed: {
+        strokeWidth: 2,
+        strokeDasharray: '1 1',
+        strokeDashoffset: 2
+    },
+    dotted: {
+        strokeWidth: 4,
+        strokeDasharray: '1 10',
+        strokeDashoffset: 2
+    }
+};
+
 const getCurvePath = ({startXY, endXY, controlXY}) => {
     return `M${startXY} Q${controlXY} ${endXY}`;
 };
@@ -12,11 +28,9 @@ const ArrowCurve = props => (
             <path
                 d={getCurvePath(props)}
                 stroke="#000000"
-                strokeWidth="4"
                 fill="none"
-                strokeDasharray="1 10"
-                strokeDashoffset="2"
                 strokeLinecap="round"
+                {...lineStyleConfig[props.lineStyle]}
             ></path>
         </svg>
     </div>
@@ -29,6 +43,7 @@ ArrowCurve.propTypes = {
     startXY: PropTypes.string,
     endXY: PropTypes.string,
     controlXY: PropTypes.string,
+    showArrow: PropTypes.bool,
     arrowAngle: PropTypes.number,
     lineStyle: PropTypes.oneOf(['solid', 'dashed', 'dotted'])
 };
@@ -40,6 +55,7 @@ ArrowCurve.defaultProps = {
     startXY: '0 0',
     endXY: '100 50',
     controlXY: '0 50',
+    showArrow: true,
     arrowAngle: 90,
     lineStyle: 'solid'
 };
