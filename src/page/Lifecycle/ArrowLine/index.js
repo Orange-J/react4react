@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './index.module.scss';
-import Arrow from './Arrow';
+import Arrow from '../Arrow';
 
-import { DEFAULT_ARROW_WIDTH } from './const';
+import { DEFAULT_ARROW_WIDTH } from '../const';
 
 const getLineBoxSize = ({ direction }) => {
     let width, height;
