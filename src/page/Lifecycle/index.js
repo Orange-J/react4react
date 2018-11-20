@@ -24,8 +24,10 @@ class Lifecycle extends Component {
     render () {
         return (
             <div className={styles.lifecycle}>
-                {/* TODO: https://www.wikitechy.com/tutorials/react/reactjs-component-life-cycle */}
+                {/* 出处: https://www.wikitechy.com/tutorials/react/reactjs-component-life-cycle */}
                 <div className={styles.chart}>
+                    {/* title */}
+                    <div className={styles.title}>Component Lifecycle</div>
 
                     {/* 起始状态 */}
                     <div className={styles.startBox}>
