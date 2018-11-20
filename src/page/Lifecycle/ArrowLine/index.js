@@ -33,7 +33,7 @@ const ArrowLine = props => {
                 <div className={`${styles[getLineCls(props)]} ${styles[props.lineStyle]} xycenter`}></div>
                 {props.showArrow ? (
                     <div className={styles[`${props.direction}Arrow`]}>
-                        <Arrow direction={props.direction}/>
+                        <Arrow direction="bottom"/>
                     </div>
                 ) : null}
             </div>
