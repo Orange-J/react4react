@@ -8,6 +8,7 @@
         background: #fff;
         font-weight: bold;
         line-height: 16px;
+        z-index: 9;
     }
     
     .chart {
@@ -82,6 +83,45 @@
                     height: 100%;
                     transform: rotate(17deg);
                 }
+            }
+
+            .shouldUpdateToMounted {
+                position: absolute;
+                top: 390px;
+                left: 100px;
+
+                .text {
+                    top: 55px;
+                    left: 62px;
+                }
+            }
+
+            .mountedToWillUpdate {
+                position: absolute;
+                top: 395px;
+                left: 90px;
+
+                .text {
+                    top: 85px;
+                    left: -14px;
+                }
+            }
+
+            .mountedToWillUnmount {
+                position: absolute;
+                top: 250px;
+                left: -200px;
+
+                .text {
+                    top: 80px;
+                    left: -4px;
+                }
+            }
+
+            .didUpdateToMounted {
+                position: absolute;
+                top: 395px;
+                left: 40px;
             }
         }
 

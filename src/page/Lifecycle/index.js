@@ -26,6 +26,8 @@ class Lifecycle extends Component {
             <div className={styles.lifecycle}>
                 {/* TODO: https://www.wikitechy.com/tutorials/react/reactjs-component-life-cycle */}
                 <div className={styles.chart}>
+
+                    {/* 起始状态 */}
                     <div className={styles.startBox}>
                         <div className={styles.startState}></div>
                         <ArrowLine direction="top" lineStyle="dashed" height={168} />
@@ -40,6 +42,8 @@ class Lifecycle extends Component {
                             </div>
                         </div>
                     </div>
+
+                    {/* render过程区 */}
                     <div className={styles.renderBox}>
                         {
                             renderBoxData.map(fnName => (
@@ -67,7 +71,67 @@ class Lifecycle extends Component {
                                 <span>setState()</span>
                             </div>
                         </div>
+
+                        <ArrowCurve
+                            cls={styles.shouldUpdateToMounted}
+                            width={110}
+                            height={85}
+                            startXY="120 80"
+                            endXY="0 0"
+                            controlXY="20 50"
+                            lineStyle="dashed"
+                            arrowAngle={333}
+                            arrowOffsetXY={[-2, 0]}
+                        >
+                            <div className={`${styles.arrowLineText} ${styles.text}`}>false</div>
+                        </ArrowCurve>
+
+                        <ArrowCurve
+                            cls={styles.mountedToWillUpdate}
+                            width={130}
+                            height={180}
+                            startXY="2 0"
+                            endXY="130 180"
+                            controlXY="20 120"
+                            lineStyle="solid"
+                            arrowAngle={118}
+                            arrowOffsetXY={[-13, -11]}
+                        >
+                            <div className={`${styles.arrowLineText} ${styles.text}`}>forceUpdate()</div>
+                        </ArrowCurve>
+
+                        <ArrowCurve
+                            cls={styles.mountedToWillUnmount}
+                            width={270}
+                            height={124}
+                            startXY="270 122"
+                            endXY="0 0"
+                            controlXY="20 120"
+                            lineStyle="solid"
+                            arrowAngle={345}
+                            arrowOffsetXY={[-4, 0]}
+                        >
+                            <div className={`${styles.arrowLineText} ${styles.text}`}>
+                                <span>ReactDOM</span>
+                                <br />
+                                <span>.unmountComponentAtNode()</span>
+                            </div>
+                        </ArrowCurve>
+
+                        <ArrowCurve
+                            cls={styles.didUpdateToMounted}
+                            width={180}
+                            height={340}
+                            startXY="180 340"
+                            endXY="40 0"
+                            controlXY="-50 240"
+                            lineStyle="dashed"
+                            arrowAngle={20}
+                            arrowOffsetXY={[-8, -2]}
+                        />
                     </div>
+
+                    {/* update过程区 */}
                     <div className={styles.updateBox}>
                         {
                             updateBoxData.map((fnName, index) => (
@@ -86,6 +150,8 @@ class Lifecycle extends Component {
                         }
                         <div className={`${styles.arrowLineText} ${styles.shouldText}`}>true</div>
                     </div>
+
+                    {/* can-use-setState()及其几条关系线 */}
                     <div className={styles.canSetStateBox}>can use setState()</div>
                     <ArrowCurve
                         cls={styles.canSetStateLine1}
